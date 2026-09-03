@@ -4,7 +4,10 @@ org: hertie-maths-data-science-C23
 org_name: Maths for Data Science
 course_name: Maths for Data Science
 course_code: GRAD-C23
-# course_description: One or two sentences, on ONE line - the blurb on every cohort site.
+# The blurb on every cohort site, on ONE line. Jan's own text, moved here verbatim
+# from the f2026 site repo's _config.yml so the course declares it rather than each
+# cohort site carrying a hand edit.
+course_description: "This course aims to deliver a compact and tailored introduction to the core mathematical concepts of data science: probability theory, calculus, linear algebra, and statistics. We will establish and reinforce the foundation that will support your further studies in machine learning, deep learning, and causal inference, and which will inform how you conceptualize and analyze data. By the end of the course, students will (re)acquaint themselves with the basic principles of probability theory that structure the process that generates data; with the behavior of functions that describe relationships in data; with the rules of linear algebra that govern how to manipulate data; and, finally, with the tools of statistical learning that we use to extract information from our datasets."
 # site_link_extensions: [pdf, html, ipynb]   # OPTIONAL: on the COHORT sites, link ONLY
 #   # these file types. Default (unset): each session's root files, plus one link per
 #   # subfolder - so a rendered deck lists the deck, not its hundreds of assets. Either way
