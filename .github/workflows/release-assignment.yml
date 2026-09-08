@@ -20,9 +20,12 @@ on:
         description: "Course-org repo to hand out from"
         required: true
         type: choice
-        default: "assignment-1-f2026"
+        default: "assignment-4-f2026"
         options:
           - assignment-1-f2026
+          - assignment-2-f2026
+          - assignment-3-f2026
+          - assignment-4-f2026
       include_solution:
         description: "Also push the solution (from the template's solution branch) into each student repo"
         type: boolean
