@@ -1,40 +1,38 @@
 # SYSTEM-OWNED - do not edit, edits here are overwritten. This workflow is
 # re-rendered from the central DSL teaching toolkit by 'Refresh actions' (nightly).
-name: Distribute grades
+name: Derive student version
 
-# Reads the grading sheets in classroom-config and sends what they hold: a feedback comment
-# on each submission repo's Feedback issue, each student's private grades-<handle> repo, the
-# registrar export, and (unless silenced) an email saying there is something new to read.
-# Nothing is said twice - a re-run after one correction reaches one student.
-# `assignment` narrows the run to one slug; blank is every sheet in the cohort, which is
-# right at the end of term and wrong in the middle of one.
-# Dry run first; it writes nothing and prints the counts. Needs the GRAPH_* secrets to mail.
+# ONE authored file, two branches. Keep the notebook you actually teach from on the
+# template's `solution` branch, under `solution/`, with the answers fenced off in the
+# nbgrader/Otter vocabulary: `### BEGIN SOLUTION` / `### END SOLUTION`, a `solution` cell
+# tag, or an Rmd/qmd chunk with `solution=TRUE`. This reads that branch and writes the
+# fenced-out version onto `main` - the only branch template-generate copies into a student
+# repo - so the starter is never maintained by hand beside the answer it is meant to be
+# missing. It never writes to `solution`, and a file with nothing fenced in it is never
+# written at all: the "starter" derived from that would be the model answer.
+# `dry_run` defaults to true and prints the file list and the counts, never the content.
+# See docs/03-add-assignment-to-course.md.
 
 on:
   workflow_dispatch:
     inputs:
-      cohort_org:
-        description: "Cohort org"
+      course_source_repo:
+        description: "Assignment template to derive the student starter for"
         required: true
         type: choice
-        default: "hertie-maths-data-science-f2026"
+        default: "assignment-4-f2026"
         options:
-          - hertie-maths-data-science-f2026
-      assignment:
-        description: "One assignment slug - leave blank for every sheet in the cohort"
-        type: string
-        required: false
+          - assignment-1-f2026
+          - assignment-2-f2026
+          - assignment-3-f2026
+          - assignment-4-f2026
       dry_run:
-        description: "Preview the grade emails - push nothing, send nothing"
+        description: "Preview only - list the files and how much would be stripped out of each"
         type: boolean
         default: true
-      silent:
-        description: "Skip the email notification (just push the grades)"
-        type: boolean
-        default: false
 
 concurrency:
-  group: ${{ github.repository }}-distribute-grades
+  group: ${{ github.repository }}-derive-student-version
   cancel-in-progress: false
 
 permissions: {}
@@ -59,10 +57,10 @@ jobs:
           cat /tmp/gherr || true
           exit 1
 
-  distribute-grades:
+  derive:
     needs: check-team
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
@@ -78,21 +76,13 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - name: Distribute grades
+      - name: Derive student version
         env:
           GH_TOKEN: ${{ secrets.DSL_BOT_TOKEN }}
-          COHORT_ORG: ${{ inputs.cohort_org }}
-          ASSIGNMENT: ${{ inputs.assignment }}
+          COURSE_ORG: ${{ github.repository_owner }}
+          COURSE_SOURCE_REPO: ${{ inputs.course_source_repo }}
           DRY_RUN: ${{ inputs.dry_run }}
-          SILENT: ${{ inputs.silent }}
-          GRAPH_TENANT_ID: ${{ secrets.GRAPH_TENANT_ID }}
-          GRAPH_CLIENT_ID: ${{ secrets.GRAPH_CLIENT_ID }}
-          GRAPH_CLIENT_CERT: ${{ secrets.GRAPH_CLIENT_CERT }}
-          GRAPH_SENDER: ${{ secrets.GRAPH_SENDER }}
-          DSL_MAINTAINER_EMAIL: ${{ secrets.DSL_MAINTAINER_EMAIL }}
         run: |
-          args=(--cohort-org "$COHORT_ORG")
-          [ -n "$ASSIGNMENT" ] && args+=(--assignment "$ASSIGNMENT")
+          args=(--course-org "$COURSE_ORG" --course-source-repo "$COURSE_SOURCE_REPO")
           if [ "$DRY_RUN" = "false" ]; then args+=(--no-dry-run); else args+=(--dry-run); fi
-          [ "$SILENT" = "true" ] && args+=(--no-notify)
-          python3 -m dsl_course.grades distribute "${args[@]}"
+          python3 -m dsl_course.derive "${args[@]}"
