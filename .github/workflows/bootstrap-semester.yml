@@ -1,15 +1,15 @@
 # SYSTEM-OWNED - do not edit, edits here are overwritten. This workflow is
 # re-rendered from the central DSL teaching toolkit by 'Refresh actions' (nightly).
-name: Bootstrap cohort
+name: Bootstrap semester
 
-# You create the empty cohort org in the web UI first (GitHub has no org-creation API)
+# You create the empty semester org in the web UI first (GitHub has no org-creation API)
 # and add the bot as an owner. Then run this with that org's name.
 
 on:
   workflow_dispatch:
     inputs:
-      cohort_org:
-        description: "Empty cohort org you've already created (bot must be an owner)"
+      semester_org:
+        description: "Empty semester org you've already created (bot must be an owner)"
         required: true
 
 permissions: {}
@@ -34,7 +34,7 @@ jobs:
           cat /tmp/gherr || true
           exit 1
 
-  bootstrap-cohort:
+  bootstrap-semester:
     needs: check-team
     runs-on: ubuntu-latest
     timeout-minutes: 60
@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
         with:
           repository: hertie-data-science-lab/dsl-teaching-toolkit
-          ref: release
+          ref: 78da401eed3ddd2b42d571cebb6070305e6d384f
           # No credential left behind in $GITHUB_WORKSPACE/.git/config. Nothing here ever
           # pushes to the checkout - the central repo is public and read-only to these
           # jobs, and every write goes through `gh`/`gh auth setup-git` against ANOTHER
@@ -60,13 +60,13 @@ jobs:
           GH_TOKEN: ${{ secrets.DSL_BOT_TOKEN }}
           DSL_BOT_TOKEN: ${{ secrets.DSL_BOT_TOKEN }}
           COURSE: ${{ github.repository_owner }}
-          COHORT: ${{ inputs.cohort_org }}
+          SEMESTER: ${{ inputs.semester_org }}
           # Forwarded, not looked up: this runs in the COURSE org, whose own bootstrap
           # propagated the address here, so --propagate-secret can pass it down to the
-          # cohort. Empty on a course org that never got one - the cohort then falls back
+          # semester. Empty on a course org that never got one - the semester then falls back
           # to GRAPH_SENDER like everything else.
           DSL_MAINTAINER_EMAIL: ${{ secrets.DSL_MAINTAINER_EMAIL }}
         run: |
-          python3 -m dsl_course.bootstrap_course --org "$COHORT" --org-name "$COHORT" \
-            --cohort --course "$COURSE" --propagate-secret
+          python3 -m dsl_course.bootstrap_course --org "$SEMESTER" \
+            --semester --course "$COURSE" --propagate-secret
           python3 -m dsl_course.seed refresh --course-org "$COURSE"
