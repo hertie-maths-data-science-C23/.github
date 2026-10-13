@@ -57,3 +57,4 @@ central_ref: 78da401eed3ddd2b42d571cebb6070305e6d384f
 set_aside:
   - empty_week:2026-10-12:lecture
   - empty_week:2026-10-12:readings
+  - empty_week:2026-10-12:lab
