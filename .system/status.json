@@ -1,7 +1,7 @@
 {
   "schema": "dsl.status/1",
   "inputs": {
-    "dsl-course.yml": "704db68277cea7ecb23157d9b59e5d9e58009135",
+    "dsl-course.yml": "09a0a85d40f8cf08cfcfb58a36cc9c994f553d41",
     "semesters.yml": "88de50d66839cd8c450874e5e072220a1ac46830"
   },
   "horizon": {
@@ -162,5 +162,23 @@
       }
     ]
   },
-  "problems": []
+  "problems": [
+    {
+      "id": "template:assignment-4-f2026:brief",
+      "scope": "course",
+      "stage": "C5",
+      "kind": "BRIEF",
+      "text": "The brief (README.md) is not written yet.",
+      "stops": "The hand-out on Tue 10 Nov would give students a placeholder brief.",
+      "fix": {
+        "repo": "hertie-maths-data-science-C23/assignment-4-f2026",
+        "path": "",
+        "line": null,
+        "screen": "template",
+        "entry": "assignment-4-f2026"
+      },
+      "when": "2026-11-10T07:00:00+01:00",
+      "bites": "later"
+    }
+  ]
 }
