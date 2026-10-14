@@ -58,11 +58,17 @@
             "detail": [
               {
                 "kind": "lecture",
-                "folders": []
+                "folders": [
+                  "m4ds/lectures",
+                  "students/lectures"
+                ]
               },
               {
                 "kind": "lab",
-                "folders": []
+                "folders": [
+                  "m4ds/labs",
+                  "students/labs"
+                ]
               },
               {
                 "kind": "readings",
