@@ -101,7 +101,7 @@
             "id": "withheld",
             "label": "Withheld patterns reviewed",
             "done": false,
-            "why": "Nothing is withheld from students yet; review the withheld patterns.",
+            "why": "Check that what is withheld from students is right.",
             "need": "suggested"
           }
         ]
@@ -149,7 +149,7 @@
         "kind": "materials",
         "check": "withheld",
         "repo": "course-materials-f2026",
-        "text": "Nothing is withheld from students yet; review the withheld patterns.",
+        "text": "Check that what is withheld from students is right.",
         "screen": "materials",
         "entry": "course-materials-f2026",
         "need": "suggested",
