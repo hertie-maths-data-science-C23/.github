@@ -127,6 +127,11 @@
         "repo": "assignment-4-f2026",
         "state": "todo",
         "starter": "handwritten"
+      },
+      {
+        "repo": "assignment-quiz-1",
+        "state": "todo",
+        "starter": "none"
       }
     ],
     "semesters": [
@@ -163,6 +168,17 @@
         "text": "The brief (README.md) is not written yet.",
         "screen": "template",
         "entry": "assignment-4-f2026",
+        "need": "needed",
+        "set_aside": false
+      },
+      {
+        "id": "template:assignment-quiz-1:brief",
+        "kind": "template",
+        "check": "brief",
+        "repo": "assignment-quiz-1",
+        "text": "The brief (README.md) is not written yet.",
+        "screen": "template",
+        "entry": "assignment-quiz-1",
         "need": "needed",
         "set_aside": false
       }
