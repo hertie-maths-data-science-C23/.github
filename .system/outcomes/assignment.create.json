@@ -1,0 +1,15 @@
+{
+  "actor": "cpj97",
+  "block": "",
+  "conclusion": "done",
+  "counts": {},
+  "details": [],
+  "finished": "2026-10-30T22:14:39Z",
+  "op": "assignment.create",
+  "preview": false,
+  "reasons": [],
+  "run_id": 41136644857,
+  "schema": "dsl.outcome/1",
+  "started": "2026-10-30T22:13:28Z",
+  "summary": "Assignment template created."
+}
