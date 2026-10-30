@@ -19,6 +19,7 @@ on:
           - assignment-2-f2026
           - assignment-3-f2026
           - assignment-4-f2026
+          - assignment-quiz-1
       semester_org:
         description: "2. Target semester org"
         required: true
