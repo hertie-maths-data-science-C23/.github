@@ -31,6 +31,7 @@ List of all repositories associated with the course org. _Auto-discovered from t
 | [assignment-2-f2026](https://github.com/hertie-maths-data-science-C23/assignment-2-f2026) | private | Assignment 2 template |
 | [assignment-3-f2026](https://github.com/hertie-maths-data-science-C23/assignment-3-f2026) | private | Assignment 3 template |
 | [assignment-4-f2026](https://github.com/hertie-maths-data-science-C23/assignment-4-f2026) | private | Assignment 4 template |
+| [assignment-final-exam](https://github.com/hertie-maths-data-science-C23/assignment-final-exam) | private | Final Exam |
 | [assignment-quiz-1](https://github.com/hertie-maths-data-science-C23/assignment-quiz-1) | private | Quiz 1 |
 | [assignment-quiz-2](https://github.com/hertie-maths-data-science-C23/assignment-quiz-2) | private | Quiz 2 |
 | [assignment-quiz-3](https://github.com/hertie-maths-data-science-C23/assignment-quiz-3) | private | Quiz 3 |
