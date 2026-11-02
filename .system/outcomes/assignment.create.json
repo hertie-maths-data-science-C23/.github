@@ -1,15 +1,15 @@
 {
   "actor": "cpj97",
   "block": "",
-  "conclusion": "done",
+  "conclusion": "failed",
   "counts": {},
   "details": [],
-  "finished": "2026-11-02T12:53:31Z",
+  "finished": "2026-11-02T12:59:04Z",
   "op": "assignment.create",
   "preview": false,
   "reasons": [],
-  "run_id": 41448160986,
+  "run_id": 41449065448,
   "schema": "dsl.outcome/1",
-  "started": "2026-11-02T12:52:11Z",
-  "summary": "Assignment template created."
+  "started": "2026-11-02T12:59:00Z",
+  "summary": "Stopped with a problem; the run log says where."
 }
