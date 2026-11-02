@@ -23,6 +23,7 @@ on:
           - assignment-quiz-2
           - assignment-quiz-3
           - assignment-quiz-4
+          - assignment-quiz-5
       semester_org:
         description: "2. Target semester org"
         required: true

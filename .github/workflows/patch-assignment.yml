@@ -36,6 +36,7 @@ on:
           - assignment-quiz-2
           - assignment-quiz-3
           - assignment-quiz-4
+          - assignment-quiz-5
       path:
         description: "File or folder on the template's default branch to push (e.g. starter.ipynb, or data/)"
         required: true

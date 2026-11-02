@@ -30,6 +30,7 @@ on:
           - assignment-quiz-2
           - assignment-quiz-3
           - assignment-quiz-4
+          - assignment-quiz-5
       preview:
         description: "Preview - list the files and how much would be stripped out of each"
         type: boolean
