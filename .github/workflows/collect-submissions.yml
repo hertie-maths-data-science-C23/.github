@@ -31,6 +31,7 @@ on:
           - assignment-3-f2026
           - assignment-4-f2026
           - assignment-quiz-1
+          - assignment-quiz-2
       assignment:
         description: "Only if two schedule.yml entries share this template: the one to act on (its key)"
         required: false
