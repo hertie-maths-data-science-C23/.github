@@ -129,6 +129,11 @@
         "starter": "handwritten"
       },
       {
+        "repo": "assignment-final-exam",
+        "state": "todo",
+        "starter": "none"
+      },
+      {
         "repo": "assignment-quiz-1",
         "state": "todo",
         "starter": "none"
@@ -188,6 +193,17 @@
         "text": "The brief (README.md) is not written yet.",
         "screen": "template",
         "entry": "assignment-4-f2026",
+        "need": "needed",
+        "set_aside": false
+      },
+      {
+        "id": "template:assignment-final-exam:brief",
+        "kind": "template",
+        "check": "brief",
+        "repo": "assignment-final-exam",
+        "text": "The brief (README.md) is not written yet.",
+        "screen": "template",
+        "entry": "assignment-final-exam",
         "need": "needed",
         "set_aside": false
       },
