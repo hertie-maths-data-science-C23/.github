@@ -35,6 +35,7 @@ List of all repositories associated with the course org. _Auto-discovered from t
 | [assignment-quiz-2](https://github.com/hertie-maths-data-science-C23/assignment-quiz-2) | private | Quiz 2 |
 | [assignment-quiz-3](https://github.com/hertie-maths-data-science-C23/assignment-quiz-3) | private | Quiz 3 |
 | [assignment-quiz-4](https://github.com/hertie-maths-data-science-C23/assignment-quiz-4) | private | Quiz 4 |
+| [assignment-quiz-5](https://github.com/hertie-maths-data-science-C23/assignment-quiz-5) | private | Quiz 5 |
 | [course-materials-f2026](https://github.com/hertie-maths-data-science-C23/course-materials-f2026) | private | Course materials (lectures/labs/readings/datasets/other) by session |
 
 Edit & stage new course-related content in these, then release it to the relevant semester org.
