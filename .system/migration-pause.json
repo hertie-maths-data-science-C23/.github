@@ -1,0 +1,57 @@
+{
+  "hold": true,
+  "migrated": false,
+  "repos": {
+    "hertie-maths-data-science-C23/.github": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-1-f2026": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-2-f2026": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-3-f2026": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-4-f2026": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-final-exam": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-quiz-1": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-quiz-2": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-quiz-3": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-quiz-4": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/assignment-quiz-5": {
+      "allowed_actions": "all",
+      "enabled": true
+    },
+    "hertie-maths-data-science-C23/course-materials-f2026": {
+      "allowed_actions": "all",
+      "enabled": true
+    }
+  },
+  "semesters": [
+    "hertie-maths-data-science-f2026"
+  ]
+}
