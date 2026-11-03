@@ -16,10 +16,11 @@
       "C2": "done",
       "C3": "done",
       "C4": "done",
-      "C5": "done",
+      "C5": "problem",
       "C6": "todo"
     },
     "stage_why": {
+      "C5": "1 problem needs fixing.",
       "C6": "The public website is off; it is optional."
     },
     "stage_need": {
@@ -39,10 +40,10 @@
       "C6": false
     },
     "verdict": {
-      "state": "ready",
-      "problems": 0,
+      "state": "fixing",
+      "problems": 1,
       "missing": null,
-      "suggestions": 3
+      "suggestions": 4
     },
     "materials": [
       {
@@ -280,7 +281,7 @@
         "entry": "assignment-4-f2026"
       },
       "when": "2026-11-10T07:00:00+01:00",
-      "bites": "later"
+      "bites": "soon"
     }
   ]
 }
