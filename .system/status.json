@@ -1,7 +1,7 @@
 {
   "schema": "dsl.status/1",
   "inputs": {
-    "dsl-course.yml": "09a0a85d40f8cf08cfcfb58a36cc9c994f553d41",
+    "course.yml": "3980c1818f6850bea2475faea9ee3e80b828a859",
     "semesters.yml": "88de50d66839cd8c450874e5e072220a1ac46830"
   },
   "horizon": {
@@ -45,52 +45,53 @@
       "missing": null,
       "suggestions": 4
     },
+    "defaults": {
+      "timezone": {
+        "value": "Europe/Berlin",
+        "source": "institution"
+      },
+      "late_window_days": {
+        "value": 10,
+        "source": "institution"
+      },
+      "late_penalty_per_day": {
+        "value": "10%",
+        "source": "institution"
+      },
+      "max_team_size": {
+        "value": 5,
+        "source": "institution"
+      },
+      "assignment_repo_visibility": {
+        "value": "private",
+        "source": "institution"
+      },
+      "archive_grace_days": {
+        "value": 60,
+        "source": "institution"
+      },
+      "materials_repo": {
+        "value": "materials",
+        "source": "institution"
+      },
+      "autosync_released_edits": {
+        "value": false,
+        "source": "institution"
+      },
+      "marks_per_question": {
+        "value": true,
+        "source": "institution"
+      },
+      "team_formation": {
+        "value": "none",
+        "source": "institution"
+      }
+    },
     "materials": [
       {
         "repo": "course-materials-f2026",
         "state": "ready",
         "checks": [
-          {
-            "id": "kind_folder",
-            "label": "At least one folder of a content kind",
-            "done": true,
-            "why": null,
-            "need": "needed",
-            "detail": [
-              {
-                "kind": "lecture",
-                "folders": [
-                  "m4ds/lectures",
-                  "students/lectures"
-                ]
-              },
-              {
-                "kind": "lab",
-                "folders": [
-                  "m4ds/labs",
-                  "students/labs"
-                ]
-              },
-              {
-                "kind": "readings",
-                "folders": [
-                  "readings"
-                ]
-              },
-              {
-                "kind": "exam",
-                "folders": []
-              },
-              {
-                "kind": "drop-in",
-                "folders": []
-              },
-              {
-                "kind": "other",
-                "folders": []
-              }
-            ]
-          },
           {
             "id": "syllabus",
             "label": "Syllabus",
