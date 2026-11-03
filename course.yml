@@ -6,7 +6,6 @@ course:
   name: Maths for Data Science
   code: GRAD-C23
   description: 'This course aims to deliver a compact and tailored introduction to the core mathematical concepts of data science: probability theory, calculus, linear algebra, and statistics. We will establish and reinforce the foundation that will support your further studies in machine learning, deep learning, and causal inference, and which will inform how you conceptualize and analyze data. By the end of the course, students will (re)acquaint themselves with the basic principles of probability theory that structure the process that generates data; with the behavior of functions that describe relationships in data; with the rules of linear algebra that govern how to manipulate data; and, finally, with the tools of statistical learning that we use to extract information from our datasets.'
-  toolkit_version_ref: 27ea7c6a76fbf7a2480358e0f76c8e06feef0267
 
 people:
   course_admins:
